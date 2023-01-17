@@ -1,5 +1,5 @@
 # obs-python-scripts-collection
-OBS的Python脚本，绝大多数是B站直播使用，更新中.
+OBS Studio的Python脚本，绝大多数是B站直播使用，更新中.
 
 ## B站粉丝计数条码
 #### 版本 : v1
