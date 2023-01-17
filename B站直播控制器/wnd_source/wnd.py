@@ -360,11 +360,11 @@ class CLSWndRefresh(QThread):
         tmp_login_account = self.bililive.appendix.get('login_account')
         try:
             self.bililive.appendix[
-                'login_status'] = f'登陆状态 : {Utils.login_status_text[str(self.bililive.login_status)]}'
+                'login_status'] = f'登录状态 : {Utils.login_status_text[str(self.bililive.login_status)]}'
             self.bililive.appendix[
                 'live_status'] = f'直播状态 : {Utils.live_status_text[str(self.bililive.get_liveroom_info()[0])]}'
             self.bililive.appendix[
-                'login_account'] = '登陆账户: <strong style="color:{}">{}</strong>'.format(
+                'login_account'] = '登录账户: <strong style="color:{}">{}</strong>'.format(
                 ('green' if self.bililive.login_status else 'gray'),
                 ('未知.' if not self.bililive.login_status else str(self.bililive.vmid)))
         finally:
@@ -446,7 +446,7 @@ class ConfWindow(QMainWindow):
     def wnd_refresh(self):
         self.label_login_status.setText(self.bililive.appendix.get(
             'login_status',
-            '登陆状态 : <strong style="color:gray">未登录.</strong>'))
+            '登录状态 : <strong style="color:gray">未登录.</strong>'))
 
         self.label_live_status.setText(self.bililive.appendix.get(
             'live_status',
@@ -454,7 +454,7 @@ class ConfWindow(QMainWindow):
 
         self.label_login_uid.setText(self.bililive.appendix.get(
             'login_account',
-            '登陆账户: <strong style="color:gray">未知.</strong>'))
+            '登录账户: <strong style="color:gray">未知.</strong>'))
 
     def qr_login(self):
         self.bililive.get_liveroom_info()
