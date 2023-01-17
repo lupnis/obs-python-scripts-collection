@@ -419,7 +419,8 @@ class ConfWindow(QMainWindow):
         self.setWindowFlags(QtCore.Qt.WindowCloseButtonHint |
                             QtCore.Qt.WindowMinimizeButtonHint)
         self.setWindowTitle('直播插件控制面板')
-
+        self.setFixedSize(self.size())
+        
         self.btn_logout.clicked.connect(self.btn_logout_clicked)
         self.btn_switch_live_status.clicked.connect(
             self.btn_switch_live_status_clicked)
